@@ -1,0 +1,47 @@
+{% extends 'church/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<br>
+
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<a href="{% url  'church:wonder' %}"><button>Back</button></a>
+<br>
+<br>
+<br>
+     <h5 style="color:red">{{ tropic }}</h5>
+
+    <ul>
+       {% for dentry in dentries %}
+          <li>
+            <h5 style="color:red">{{ dentry.date_added|date:'M d, Y H:1'}}</h5>
+            <p style="color:green">{{ dentry.text|linebreaks }}</p>
+            <h3 style="color:blue">{{ dentry.testifier }}</h3>
+          </li>
+       {% endfor %}
+    </ul>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+
+
+
+{% endblock content %}

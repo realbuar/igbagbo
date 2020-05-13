@@ -1,0 +1,37 @@
+{% extends 'church/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<br>
+
+<br>
+
+<br>
+
+        <ul>
+            {% for top in tops %}
+                <h5>
+                    <a href="{% url 'news' top.id %}">{{ top }}</a>
+                </h5>
+            {% endfor %}
+        </ul>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+{% include 'church/footer.html' %}
+
+
+{% endblock content %}
+
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>

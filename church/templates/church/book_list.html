@@ -1,0 +1,45 @@
+{% extends 'church/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+
+
+    <h1>THE BOOKS OF THE MONTH </h1>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>
+                    <a href="{{ book.pdf.url }}" class="btn btn-primary" target="_blank">
+                        DOWNLOAD BOOK
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+{% endblock %}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+
+{% include 'church/footer.html' %}

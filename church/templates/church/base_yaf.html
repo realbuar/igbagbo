@@ -1,0 +1,78 @@
+<img src="static/img/winners.png" alt="JESUS IS MY SAVIOUR" width="200" height="120"  align="centre" />
+
+{% load static %}
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Winners' Chapel Total Garden{% endblock %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/winners.css' %}">
+</head>
+<body>
+
+
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+   
+            <div class="classy-menu">
+
+
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+
+
+
+
+
+<div id="side-menu">
+    <ul class="bhuwah">
+        <li><a href="{% url 'church:home' %}">HOME</a></li>
+        <li><a href="{% url  'church:topics' %}">LIVING FAITH </a></li>
+        <li> <a href="{% url  'church:amen' %}" > YOUTH ALIVE </a></li>
+        <li><a href="{% url  'church:nice' %}">MEDIA HOUSE</a>
+           <ul>
+              <li><a href="{% url  'church:wonder' %}"> TESTIMONIES </a></li>
+              <li><a href="{% url  'church:upload' %}"> PROPHETIC DECLEARATION</a></li>
+           </ul>
+
+    </ul>
+
+
+
+
+</div >
+
+
+
+
+
+
+    <div class="container">
+        <div class="page-header">
+
+
+
+
+
+
+    {% block header %}{% endblock header %}
+
+
+{% block content %}{% endblock content %}
+
+
+
+        <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

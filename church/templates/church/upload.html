@@ -1,0 +1,53 @@
+{% extends "church/base.html" %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+
+
+
+        <table class="table">
+          <thead>
+            <tr>
+                <th><h1>VIDEOS</h1></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for video in videos %}
+
+                <tr>
+                    <td>
+                       <a href="{{ video.videofile.url }}" class="btn btn-primary" target="_blank">
+                            <h2>{{ video.name }}</h2>
+                          </a>
+
+                    </td>
+                </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+{% include 'church/footer.html' %}
+
+{% endblock content %}
+
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>

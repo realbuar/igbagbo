@@ -1,0 +1,57 @@
+{% extends 'church/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<br>
+
+<br>
+
+
+        <a href="{% url  'new' %}"><button>Back</button></a>
+
+                <h5 style="color:red"> HEADLINES: {{ top }}</h5>
+
+                <ul>
+                  {% for new in news %}
+                    <section class="blog-area mt-50">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-12 col-lg-8 mb-100">
+                               <div class="blog-details-area">
+                                  {{ new.gallery }}
+
+                                  <div class="post-meta"  >
+                                      <a href="#" style="color:green"><i class="icon_clock_alt"></i>{{ new.date_added|date:'M d, Y H:1'}}</a>
+                                  </div>
+                                  <p>{{ new.text }}</p>
+                               </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section>
+                  {% endfor %}
+                </ul>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+{% include 'church/footer.html' %}
+
+
+{% endblock content %}
+
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
